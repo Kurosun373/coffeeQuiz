@@ -114,7 +114,20 @@ class QuestionViewController: UIViewController {
             //問題文がなければ結果画面へ遷移する
             //StoryboardのIdentifierに設定した値(result)を指定して
             //ViewControllerを生成する
-            
+            if let resultViewController = storyboard?.instantiateViewController(withIdentifier: "result") as? ResultViewController {
+                //Storyboardのsegueを利用しない明示的な画面遷移処理
+                present(resultViewController, animated: true, completion: nil)
+            }
+            return
+        }
+        
+        //問題文がある場合は次の問題へ遷移する
+        //StoryboardのIdentifierに設定した値(question)を設定して
+        //ViewControllerを生成する
+        if let nextQuestionViewController = storyboard?.instantiateViewController(withIdentifier: "question") as? QuestionViewController {
+            nextQuestionViewController.questionData = nextQuestion
+            //StoryboardのSegueを利用しない明示的な画面遷移処理
+            present(nextQuestionViewController, animated: true, completion: nil)
         }
     }
 }
