@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTg-P4-baN">
+                                <rect key="frame" x="83" y="90" width="213" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFB-kR-ctX">
+                                <rect key="frame" x="156" y="316" width="74" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.36427431177576775" blue="0.31359326850778724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="START"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Aba-pC-P0h" kind="presentation" id="keq-Kp-Suq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BA勉強頑張りましょう。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEi-pt-J7d">
+                                <rect key="frame" x="91" y="232" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FTg-P4-baN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="7Of-8h-JOL"/>
+                            <constraint firstItem="FTg-P4-baN" firstAttribute="centerX" secondItem="TEi-pt-J7d" secondAttribute="centerX" id="Fol-PV-QWs"/>
+                            <constraint firstItem="yFB-kR-ctX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="Ua6-qh-iOJ"/>
+                            <constraint firstItem="TEi-pt-J7d" firstAttribute="top" secondItem="FTg-P4-baN" secondAttribute="bottom" constant="91" id="cjZ-oP-dwS"/>
+                            <constraint firstItem="yFB-kR-ctX" firstAttribute="top" secondItem="TEi-pt-J7d" secondAttribute="bottom" constant="63" id="ubY-S6-ngw"/>
+                            <constraint firstItem="FTg-P4-baN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="ylZ-5F-Bh1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="B0q-Vy-lVn">
+            <objects>
+                <viewController storyboardIdentifier="question" id="Aba-pC-P0h" customClass="QuestionViewController" customModule="coffeeQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRb-Iy-chz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obu-cX-dfX">
+                                <rect key="frame" x="166" y="44" width="39" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KE9-eJ-Slz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="コーヒーを乾燥させる際、かき混ぜる時に使用する道具の名称は?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d4p-ny-8vv">
+                                <rect key="frame" x="16" y="73" width="343" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8N4-py-WOQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uEe-dD-rZS">
+                                <rect key="frame" x="74" y="181" width="226" height="434"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N57-zu-JUf">
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="101"/>
+                                        <color key="backgroundColor" red="0.34775662251924899" green="0.49950472909520988" blue="0.90084601683937826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="シンブリア">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6x-dM-IRB">
+                                        <rect key="frame" x="0.0" y="111" width="226" height="101"/>
+                                        <color key="backgroundColor" red="0.72441689932846864" green="0.82131811323825998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="パティオ">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2D-Vm-tPF">
+                                        <rect key="frame" x="0.0" y="222" width="226" height="101"/>
+                                        <color key="backgroundColor" red="0.3477566225" green="0.49950472909999999" blue="0.90084601679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="ベルジャー">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xu-LU-00A">
+                                        <rect key="frame" x="0.0" y="333" width="226" height="101"/>
+                                        <color key="backgroundColor" red="0.72441689929999997" green="0.82131811320000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="レーキ">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct" translatesAutoresizingMaskIntoConstraints="NO" id="ffu-pt-riq">
+                                <rect key="frame" x="86" y="232.5" width="202" height="202"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="incorrect" translatesAutoresizingMaskIntoConstraints="NO" id="L4H-Ip-QBI">
+                                <rect key="frame" x="86.5" y="232.5" width="201" height="201"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Obu-cX-dfX" firstAttribute="top" secondItem="0yI-uH-eBC" secondAttribute="top" constant="24" id="2NR-Hm-PM7"/>
+                            <constraint firstItem="L4H-Ip-QBI" firstAttribute="centerY" secondItem="DRb-Iy-chz" secondAttribute="centerY" id="3pb-iZ-baA"/>
+                            <constraint firstItem="ffu-pt-riq" firstAttribute="centerX" secondItem="DRb-Iy-chz" secondAttribute="centerX" id="656-d4-A67"/>
+                            <constraint firstItem="d4p-ny-8vv" firstAttribute="leading" secondItem="DRb-Iy-chz" secondAttribute="leadingMargin" id="8QV-YY-YRH"/>
+                            <constraint firstItem="uEe-dD-rZS" firstAttribute="top" secondItem="d4p-ny-8vv" secondAttribute="bottom" constant="8" symbolic="YES" id="AU8-h3-CFA"/>
+                            <constraint firstItem="d4p-ny-8vv" firstAttribute="top" secondItem="Obu-cX-dfX" secondAttribute="bottom" constant="8" symbolic="YES" id="GHB-mU-YXq"/>
+                            <constraint firstItem="d4p-ny-8vv" firstAttribute="centerX" secondItem="uEe-dD-rZS" secondAttribute="centerX" id="OqF-Ed-G6l"/>
+                            <constraint firstItem="0yI-uH-eBC" firstAttribute="trailing" secondItem="Obu-cX-dfX" secondAttribute="trailing" constant="170" id="VOo-oG-RBB"/>
+                            <constraint firstItem="uEe-dD-rZS" firstAttribute="leading" secondItem="0yI-uH-eBC" secondAttribute="leading" constant="74" id="XHS-MK-MRK"/>
+                            <constraint firstItem="ffu-pt-riq" firstAttribute="centerY" secondItem="DRb-Iy-chz" secondAttribute="centerY" id="YFP-5O-dG0"/>
+                            <constraint firstItem="0yI-uH-eBC" firstAttribute="bottom" secondItem="uEe-dD-rZS" secondAttribute="bottom" constant="52" id="pDr-4P-cOr"/>
+                            <constraint firstItem="L4H-Ip-QBI" firstAttribute="centerX" secondItem="DRb-Iy-chz" secondAttribute="centerX" id="vcC-MH-ZjR"/>
+                            <constraint firstItem="Obu-cX-dfX" firstAttribute="leading" secondItem="0yI-uH-eBC" secondAttribute="leading" constant="166" id="vwA-V4-u8c"/>
+                            <constraint firstItem="d4p-ny-8vv" firstAttribute="trailing" secondItem="DRb-Iy-chz" secondAttribute="trailingMargin" id="zBs-nZ-JJY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0yI-uH-eBC"/>
+                    </view>
+                    <connections>
+                        <outlet property="answer1Button" destination="N57-zu-JUf" id="73W-WN-9Rs"/>
+                        <outlet property="answer2Button" destination="b6x-dM-IRB" id="5CX-Fs-JWN"/>
+                        <outlet property="answer3Button" destination="J2D-Vm-tPF" id="12R-h3-Pax"/>
+                        <outlet property="answer4Button" destination="2xu-LU-00A" id="Kbn-AE-yOq"/>
+                        <outlet property="correctImageView" destination="ffu-pt-riq" id="9l8-tL-1BE"/>
+                        <outlet property="incorrectImageView" destination="L4H-Ip-QBI" id="65f-5F-yRd"/>
+                        <outlet property="questionNoLabel" destination="Obu-cX-dfX" id="FI5-Af-sL0"/>
+                        <outlet property="questionTextView" destination="d4p-ny-8vv" id="A5s-GL-lzR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tE-XX-Z9x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="659"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="zhd-a4-naq">
+            <objects>
+                <viewController storyboardIdentifier="result" id="rcd-i6-DYY" customClass="ResultViewController" customModule="coffeeQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J9k-3d-oRh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3FA-Sd-fJ5">
+                                <rect key="frame" x="98.5" y="192" width="178" height="282"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正解は" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YD-F0-USK">
+                                        <rect key="frame" x="0.0" y="0.0" width="178" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nya-XR-VFh">
+                                        <rect key="frame" x="0.0" y="78" width="178" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="でした！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jij-om-aUb">
+                                        <rect key="frame" x="0.0" y="156" width="178" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8X-TG-pJn">
+                                        <rect key="frame" x="0.0" y="234" width="178" height="48"/>
+                                        <color key="backgroundColor" red="0.99979895574731648" green="0.63025647516732808" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="タイトルへ戻る">
+                                            <color key="titleColor" red="0.36483970207253891" green="0.36483970207253891" blue="0.36483970207253891" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3FA-Sd-fJ5" firstAttribute="centerX" secondItem="J9k-3d-oRh" secondAttribute="centerX" id="5Sw-nM-V5X"/>
+                            <constraint firstItem="3FA-Sd-fJ5" firstAttribute="centerY" secondItem="J9k-3d-oRh" secondAttribute="centerY" id="FhQ-8F-45f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w8M-Xh-JOC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FC-Mq-MZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1370.4000000000001" y="658.92053973013503"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="correct" width="202" height="202"/>
+        <image name="incorrect" width="201" height="201"/>
+    </resources>
+</document>
