@@ -172,7 +172,7 @@
                         <outlet property="answer4Button" destination="2xu-LU-00A" id="Kbn-AE-yOq"/>
                         <outlet property="correctImageView" destination="ffu-pt-riq" id="9l8-tL-1BE"/>
                         <outlet property="incorrectImageView" destination="L4H-Ip-QBI" id="65f-5F-yRd"/>
-                        <outlet property="questionNoLabel" destination="Obu-cX-dfX" id="FI5-Af-sL0"/>
+                        <outlet property="questionNoLabel" destination="Obu-cX-dfX" id="IKZ-0I-Rm5"/>
                         <outlet property="questionTextView" destination="d4p-ny-8vv" id="A5s-GL-lzR"/>
                     </connections>
                 </viewController>
@@ -232,6 +232,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w8M-Xh-JOC"/>
                     </view>
+                    <connections>
+                        <outlet property="correctPercentLabel" destination="nya-XR-VFh" id="UJX-63-V04"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3FC-Mq-MZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

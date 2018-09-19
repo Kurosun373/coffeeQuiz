@@ -28,7 +28,9 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //初期データ設定処理, 全画面で設定済みのquestionDataから値を取り出す
+        //初期データ設定処理, 前画面で設定済みのquestionDataから値を取り出す
+//        print("test")
+//        print(questionData.questionNo)
         questionNoLabel.text = "Q.\(questionData.questionNo)"
         questionTextView.text = questionData.question
         answer1Button.setTitle(questionData.answer1, for: UIControlState.normal)

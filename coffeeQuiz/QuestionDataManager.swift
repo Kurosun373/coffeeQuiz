@@ -96,7 +96,7 @@ class QuestionDataManager {
             let csvStringData = try String(contentsOfFile: csvFilePath, encoding: String.Encoding.utf8)
             
             //csvデータを1行ずつ読みこむ
-            csvStringData.enumerateLines(invoking;: { (line, stop) in
+            csvStringData.enumerateLines(invoking: { (line, stop) in
                 //カンマ区切りで分割
                 let questionSourceDataArray = line.components(separatedBy: ",")
                 //問題データを格納するオブジェクトを作成
@@ -105,6 +105,8 @@ class QuestionDataManager {
                 self.questionDataArray.append(questionData)
                 //問題番号を設定
                 questionData.questionNo = self.questionDataArray.count
+                print("hey")
+                print(questionData.questionNo)
                 
                 })
         } catch let error {

@@ -30,12 +30,14 @@ class StartViewController: UIViewController {
         //nextViewControllerとしてQuestionViewControllerを指定してる
         guard let nextViewController = segue.destination as? QuestionViewController else {
             //取得できずに終了
+            print("No")
             return
         }
         
         //問題文の取り出し
         guard let questionData = QuestionDataManager.sharedInstance.nextQuestion() else{
             //取得できずに終了
+            print("OMG")
             return
         }
         
@@ -44,7 +46,7 @@ class StartViewController: UIViewController {
     }
     
     //タイトルに戻ってくる時に呼び出される処理
-    @IBAction func goToTile(_ segue: UIStoryboardSegue){
+    @IBAction func goToTitle(_ segue: UIStoryboardSegue){
         
     }
 }
