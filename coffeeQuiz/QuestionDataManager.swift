@@ -41,7 +41,7 @@ class QuestionData {
         answer3 = questionSourceDataArray[3]
         answer4 = questionSourceDataArray[4]
         correctAnswerNumber = Int(questionSourceDataArray[5])!
-       print(answer4)
+//       print(answer4)
     }
     
     //ユーザが選択した答えが正解かどうか判定する
@@ -80,7 +80,7 @@ class QuestionDataManager {
     func loadQuestion(){
         //格納ずみの問題文があれば一旦削除しておく
         questionDataArray.removeAll()
-        print("test1")
+        
         //現在の問題のインデックスを初期化
         nowQuestionIndex = 0
         
@@ -97,7 +97,7 @@ class QuestionDataManager {
             let csvStringData = try String(contentsOfFile: csvFilePath, encoding: String.Encoding.utf8)
             
             //csvデータを1行ずつ読みこむ
-            csvStringData.enumerateLines { (line, stop) -> () in
+            csvStringData.enumerateLines(invoking:  { (line, stop) -> () in
                 //カンマ区切りで分割
                 let questionSourceDataArray = line.components(separatedBy: ", ")
 //                print(questionSourceDataArray)
@@ -110,7 +110,7 @@ class QuestionDataManager {
 //                print("hey")
 //                print(questionData.questionNo)
                 
-                }
+                })
         } catch let error {
             print("Import Error csv files: \(error)" )
             return

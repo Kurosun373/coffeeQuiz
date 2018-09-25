@@ -9,6 +9,7 @@
 import UIKit
 import AudioToolbox
 
+
 class QuestionViewController: UIViewController {
     
     //前の画面から(nextQuestion関数の返り値)データを受け取る
@@ -75,9 +76,11 @@ class QuestionViewController: UIViewController {
     func goNextQuestionWithAnimation() {
         //正解しているか判定する
         if questionData.isCorrect(){
+            print("true")
             //正解のアニメーションを再生しながら次の問題へ遷移する
             goNextQuestionWithCorrectAnimation()
         } else {
+            print("false")
             //不正解のアニメーションを再生しながら次の問題へ遷移する
             goNextQuestionWithIncorrectAnimation()
         }
@@ -90,7 +93,7 @@ class QuestionViewController: UIViewController {
         AudioServicesPlayAlertSound(1025)
         
         //アニメーション
-        UIView.animate(withDuration: 2.0, animations: {
+        UIView.animate(withDuration: 1.0, animations: {
             //アルファ値を1.0に変化させる(初期値はStoryboardで0.0に設定済み)
             self.correctImageView.alpha = 1.0
         }) { (Bool) in
@@ -104,7 +107,7 @@ class QuestionViewController: UIViewController {
         AudioServicesPlayAlertSound(1006)
         
         //アニメーション
-        UIView.animate(withDuration: 2.0, animations: {
+        UIView.animate(withDuration: 1.0, animations: {
             //アルファ値を1.0に変化させる(初期値はStoryboardで0.0に設定済み)
             self.incorrectImageView.alpha = 1.0
         }) { (Bool) in

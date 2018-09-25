@@ -69,18 +69,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obu-cX-dfX">
-                                <rect key="frame" x="166" y="44" width="39" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Q.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obu-cX-dfX">
+                                <rect key="frame" x="166" y="44" width="79" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="KE9-eJ-Slz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="コーヒーを乾燥させる際、かき混ぜる時に使用する道具の名称は?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d4p-ny-8vv">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="コーヒーを乾燥させる際、かき混ぜる時に使用する道具の名称は?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d4p-ny-8vv">
                                 <rect key="frame" x="16" y="73" width="343" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="8N4-py-WOQ"/>
                                 </constraints>
@@ -102,6 +105,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tapAnswer1Button:" destination="Aba-pC-P0h" eventType="touchUpInside" id="yC7-Je-PUQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6x-dM-IRB">
                                         <rect key="frame" x="0.0" y="111" width="227" height="101"/>
@@ -110,6 +116,14 @@
                                         <state key="normal" title="パティオ">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tapAnswer2Button:" destination="Aba-pC-P0h" eventType="touchUpInside" id="Doe-kc-rCe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2D-Vm-tPF">
                                         <rect key="frame" x="0.0" y="222" width="227" height="101"/>
@@ -123,6 +137,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tapAnswer3Button:" destination="Aba-pC-P0h" eventType="touchUpInside" id="m3f-Cd-Fk8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xu-LU-00A">
                                         <rect key="frame" x="0.0" y="333" width="227" height="101"/>
@@ -136,6 +153,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tapAnswer4Button:" destination="Aba-pC-P0h" eventType="touchUpInside" id="a7n-Bo-dmi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -221,6 +241,10 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goToTitle:" destination="IXb-oA-Pgn" eventType="touchUpInside" id="DkU-4c-fnh"/>
+                                            <segue destination="IXb-oA-Pgn" kind="unwind" unwindAction="goToTitle:" id="1dd-v9-4Eb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -237,6 +261,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3FC-Mq-MZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IXb-oA-Pgn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1370.4000000000001" y="658.92053973013503"/>
         </scene>

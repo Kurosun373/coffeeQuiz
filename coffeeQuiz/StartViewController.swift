@@ -40,8 +40,9 @@ class StartViewController: UIViewController {
         nextViewController.questionData = questionData
     }
     //タイトルに戻ってくる時に呼び出される処理
-    @IBAction func goToTitle(_ segue: UIStoryboardSegue){
-        
+    @IBAction func goToTitle(_ sender: UIStoryboardSegue) {
+        print("GoTitle")
     }
+    
     
 }
