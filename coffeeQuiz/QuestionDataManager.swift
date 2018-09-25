@@ -27,20 +27,21 @@ class QuestionData {
     var correctAnswerNumber: Int
     
     //ユーザが選択した選択肢の番号
-    //まだわからないけど、nilじゃないよっていうのを示すために?をつけてる
     var userChoiceAnswerNumber: Int?
     
     //問題文の番号
     var questionNo: Int = 0
     //クラスが生成された時の処理
     //init関数で定義することで明確になる
+    //ここまでは読み込まれてる
     init(questionSourceDataArray: [String]){
         question = questionSourceDataArray[0]
-        answer1 =  questionSourceDataArray[1]
+        answer1 = questionSourceDataArray[1]
         answer2 = questionSourceDataArray[2]
         answer3 = questionSourceDataArray[3]
         answer4 = questionSourceDataArray[4]
         correctAnswerNumber = Int(questionSourceDataArray[5])!
+       print(answer4)
     }
     
     //ユーザが選択した答えが正解かどうか判定する
@@ -79,7 +80,7 @@ class QuestionDataManager {
     func loadQuestion(){
         //格納ずみの問題文があれば一旦削除しておく
         questionDataArray.removeAll()
-        
+        print("test1")
         //現在の問題のインデックスを初期化
         nowQuestionIndex = 0
         
@@ -91,24 +92,25 @@ class QuestionDataManager {
         }
         
         //csv読み込み
-        //ココ構文がちょっとわからなかった
+        //ここ変えた
         do {
             let csvStringData = try String(contentsOfFile: csvFilePath, encoding: String.Encoding.utf8)
             
             //csvデータを1行ずつ読みこむ
-            csvStringData.enumerateLines(invoking: { (line, stop) in
+            csvStringData.enumerateLines { (line, stop) -> () in
                 //カンマ区切りで分割
-                let questionSourceDataArray = line.components(separatedBy: ",")
+                let questionSourceDataArray = line.components(separatedBy: ", ")
+//                print(questionSourceDataArray)
                 //問題データを格納するオブジェクトを作成
                 let questionData = QuestionData(questionSourceDataArray: questionSourceDataArray)
                 //問題を追加
                 self.questionDataArray.append(questionData)
                 //問題番号を設定
                 questionData.questionNo = self.questionDataArray.count
-                print("hey")
-                print(questionData.questionNo)
+//                print("hey")
+//                print(questionData.questionNo)
                 
-                })
+                }
         } catch let error {
             print("Import Error csv files: \(error)" )
             return

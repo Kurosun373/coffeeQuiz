@@ -8,32 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		FD050EB121501F90009194AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD050EB021501F90009194AA /* AppDelegate.swift */; };
-		FD050EB321501F90009194AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD050EB221501F90009194AA /* ViewController.swift */; };
 		FD050EB621501F90009194AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD050EB421501F90009194AA /* Main.storyboard */; };
 		FD050EB821501F92009194AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD050EB721501F92009194AA /* Assets.xcassets */; };
 		FD050EBB21501F92009194AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD050EB921501F92009194AA /* LaunchScreen.storyboard */; };
 		FD050EC421501FEE009194AA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD050EC321501FEE009194AA /* AudioToolbox.framework */; };
-		FD050EC621503D7C009194AA /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = FD050EC521503D7C009194AA /* question.csv */; };
 		FD050EC821503F08009194AA /* QuestionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD050EC721503F08009194AA /* QuestionDataManager.swift */; };
 		FD050ECA215054F5009194AA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD050EC9215054F5009194AA /* StartViewController.swift */; };
 		FD050ECC21505998009194AA /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD050ECB21505997009194AA /* QuestionViewController.swift */; };
 		FD050ECE215059AE009194AA /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD050ECD215059AE009194AA /* ResultViewController.swift */; };
+		FD2BEADB2158B0970000125B /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = FD2BEADA2158B0960000125B /* question.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD050EAD21501F90009194AA /* coffeeQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coffeeQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD050EB021501F90009194AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD050EB221501F90009194AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD050EB521501F90009194AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD050EB721501F92009194AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD050EBA21501F92009194AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD050EBC21501F92009194AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD050EC321501FEE009194AA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		FD050EC521503D7C009194AA /* question.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = question.csv; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 0; };
 		FD050EC721503F08009194AA /* QuestionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDataManager.swift; sourceTree = "<group>"; };
 		FD050EC9215054F5009194AA /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FD050ECB21505997009194AA /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		FD050ECD215059AE009194AA /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		FD2BEADA2158B0960000125B /* question.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = question.csv; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +66,8 @@
 		FD050EAF21501F90009194AA /* coffeeQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				FD2BEADA2158B0960000125B /* question.csv */,
 				FD050EB021501F90009194AA /* AppDelegate.swift */,
-				FD050EB221501F90009194AA /* ViewController.swift */,
-				FD050EC521503D7C009194AA /* question.csv */,
 				FD050EC721503F08009194AA /* QuestionDataManager.swift */,
 				FD050EB421501F90009194AA /* Main.storyboard */,
 				FD050EC9215054F5009194AA /* StartViewController.swift */,
@@ -151,7 +148,7 @@
 			files = (
 				FD050EBB21501F92009194AA /* LaunchScreen.storyboard in Resources */,
 				FD050EB821501F92009194AA /* Assets.xcassets in Resources */,
-				FD050EC621503D7C009194AA /* question.csv in Resources */,
+				FD2BEADB2158B0970000125B /* question.csv in Resources */,
 				FD050EB621501F90009194AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,7 +160,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD050EB321501F90009194AA /* ViewController.swift in Sources */,
 				FD050ECC21505998009194AA /* QuestionViewController.swift in Sources */,
 				FD050ECA215054F5009194AA /* StartViewController.swift in Sources */,
 				FD050EB121501F90009194AA /* AppDelegate.swift in Sources */,

@@ -9,31 +9,26 @@
 import UIKit
 
 class StartViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     //次の画面に戦記する前に呼び出される準備処理
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    //多分ここが認識できてない←
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
         
-        //問題文の読み込み
+        //        問題文の読み込み
         QuestionDataManager.sharedInstance.loadQuestion()
-        
         //遷移先画面の呼び出し
         //nextViewControllerとしてQuestionViewControllerを指定してる
         guard let nextViewController = segue.destination as? QuestionViewController else {
             //取得できずに終了
-            print("No")
             return
         }
-        
         //問題文の取り出し
         guard let questionData = QuestionDataManager.sharedInstance.nextQuestion() else{
             //取得できずに終了
@@ -44,9 +39,9 @@ class StartViewController: UIViewController {
         //問題文のセット
         nextViewController.questionData = questionData
     }
-    
     //タイトルに戻ってくる時に呼び出される処理
     @IBAction func goToTitle(_ segue: UIStoryboardSegue){
         
     }
+    
 }

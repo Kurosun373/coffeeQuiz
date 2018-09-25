@@ -27,12 +27,15 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        QuestionDataManager.sharedInstance.loadQuestion()
         //初期データ設定処理, 前画面で設定済みのquestionDataから値を取り出す
 //        print("test")
-//        print(questionData.questionNo)
+        print(questionData.questionNo)
+//        nilが入ってる
+//        これを解決すればOK
         questionNoLabel.text = "Q.\(questionData.questionNo)"
         questionTextView.text = questionData.question
+//        print(questionTextView.text)
         answer1Button.setTitle(questionData.answer1, for: UIControlState.normal)
         answer2Button.setTitle(questionData.answer2, for: UIControlState.normal)
         answer3Button.setTitle(questionData.answer3, for: UIControlState.normal)
