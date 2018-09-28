@@ -1,2 +1,4 @@
 correct.imageset
 incorrect.imageset
+*.jpeg
+*.png
