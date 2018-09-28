@@ -8,7 +8,8 @@
 
 import UIKit
 import AudioToolbox
-
+//今度はquestionNo用
+var _counter = 1
 
 class QuestionViewController: UIViewController {
     
@@ -25,16 +26,20 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var correctImageView: UIImageView!       //正解時イメージビュー
     @IBOutlet weak var incorrectImageView: UIImageView!     //不正解時イメージビュー
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        QuestionDataManager.sharedInstance.loadQuestion()
         //初期データ設定処理, 前画面で設定済みのquestionDataから値を取り出す
 //        print("test")
-        print(questionData.questionNo)
+//        print(questionData.questionNo)
 //        nilが入ってる
 //        これを解決すればOK
-        questionNoLabel.text = "Q.\(questionData.questionNo)"
+        questionNoLabel.text = "Q.\(String(_counter))"
+        if _counter < 11 {
+            _counter += 1
+        }
         questionTextView.text = questionData.question
 //        print(questionTextView.text)
         answer1Button.setTitle(questionData.answer1, for: UIControlState.normal)

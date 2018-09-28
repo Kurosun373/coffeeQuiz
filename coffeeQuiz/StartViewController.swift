@@ -9,9 +9,11 @@
 import UIKit
 
 class StartViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -23,6 +25,8 @@ class StartViewController: UIViewController {
         
         //        問題文の読み込み
         QuestionDataManager.sharedInstance.loadQuestion()
+        //randomToolも呼び出す！
+        QuestionDataManager.sharedInstance.randomTool()
         //遷移先画面の呼び出し
         //nextViewControllerとしてQuestionViewControllerを指定してる
         guard let nextViewController = segue.destination as? QuestionViewController else {
@@ -42,6 +46,7 @@ class StartViewController: UIViewController {
     //タイトルに戻ってくる時に呼び出される処理
     @IBAction func goToTitle(_ sender: UIStoryboardSegue) {
         print("GoTitle")
+       _counter = 1
     }
     
     

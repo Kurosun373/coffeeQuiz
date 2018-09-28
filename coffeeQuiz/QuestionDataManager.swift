@@ -8,9 +8,9 @@
 
 import Foundation
 
+
 //1つの問題に関する情報を格納するデータクラス
 class QuestionData {
-
     //問題文
     var question: String
     
@@ -75,10 +75,10 @@ class QuestionDataManager {
         //シングルトンであることを保証するためにprivateで宣言しておく
         
     }
-    
+    //問題数のカウント
+    var counter = 0
     //問題文の読み込み処理
-    func loadQuestion(){
-        //格納ずみの問題文があれば一旦削除しておく
+    func loadQuestion(){        //格納ずみの問題文があれば一旦削除しておく
         questionDataArray.removeAll()
         
         //現在の問題のインデックスを初期化
@@ -116,14 +116,36 @@ class QuestionDataManager {
             return
         }
     }
-    
+    //配列に同じ数値を入れて初期化
+    var questionArrayCut = [Int](repeating: 0, count: 10)
+    func randomTool() {
+        //0~20の中から重複しない10個の乱数を生成し、配列に入れてもどす
+        let questionArray: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        var questionArray_Shuffled = questionArray.shuffled()
+        
+        for n in 0...9 {
+            questionArrayCut[n] = questionArray_Shuffled[n+5]
+            print(questionArrayCut[n])
+        }
+        
+    }
+
     //次の問題を取り出す
     func nextQuestion() -> QuestionData? {
-        if nowQuestionIndex < questionDataArray.count {
+        if counter < 10 {
+           
+            //多分ここをランダムにすればいいんだと思う
+            //counterが0~9の範囲で1ずつ増えて行くから、配列の値を取得しちゃえばいいと思う
+            //未完成
+            let qArray: [Int] = questionArrayCut
+            nowQuestionIndex = qArray[counter]
+            print(nowQuestionIndex)
             let nextQuestion = questionDataArray[nowQuestionIndex]
-            nowQuestionIndex += 1
+            counter += 1
             return nextQuestion
+        }else{
+            counter = 0
         }
         return nil
-    }    
+    }
 }

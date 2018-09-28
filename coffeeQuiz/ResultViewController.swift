@@ -15,7 +15,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         //問題数を取得する
-        let questionCount = QuestionDataManager.sharedInstance.questionDataArray.count
+//        let questionCount = QuestionDataManager.sharedInstance.questionDataArray.count
         
         //正解数を取得する
         var correctCount: Int = 0
@@ -30,10 +30,10 @@ class ResultViewController: UIViewController {
         }
         
         //正解率の計算
-        let correctPercent: Float = (Float(correctCount) / Float(questionCount)) * 100
+        let correctPercent: Int = Int(correctCount) * 10
         
         //正解数率を少数第一位まで計算して画面に反映する
-        correctPercentLabel.text = String(format: "%.1f", correctPercent) + "%"
+        correctPercentLabel.text = String(correctPercent) + "%"
     }
     
     override func didReceiveMemoryWarning() {
