@@ -16,7 +16,7 @@
 		FD050ECA215054F5009194AA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD050EC9215054F5009194AA /* StartViewController.swift */; };
 		FD050ECC21505998009194AA /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD050ECB21505997009194AA /* QuestionViewController.swift */; };
 		FD050ECE215059AE009194AA /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD050ECD215059AE009194AA /* ResultViewController.swift */; };
-		FD2BEADB2158B0970000125B /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = FD2BEADA2158B0960000125B /* question.csv */; };
+		FD4FBCAF215F5ADE0016ADA1 /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = FD4FBCAE215F5ADE0016ADA1 /* question.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		FD050EC9215054F5009194AA /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FD050ECB21505997009194AA /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		FD050ECD215059AE009194AA /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		FD2BEADA2158B0960000125B /* question.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = question.csv; sourceTree = SOURCE_ROOT; };
+		FD4FBCAE215F5ADE0016ADA1 /* question.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = question.csv; path = ../../../../Desktop/question.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 		FD050EAF21501F90009194AA /* coffeeQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				FD2BEADA2158B0960000125B /* question.csv */,
+				FD4FBCAE215F5ADE0016ADA1 /* question.csv */,
 				FD050EB021501F90009194AA /* AppDelegate.swift */,
 				FD050EC721503F08009194AA /* QuestionDataManager.swift */,
 				FD050EB421501F90009194AA /* Main.storyboard */,
@@ -147,8 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD050EBB21501F92009194AA /* LaunchScreen.storyboard in Resources */,
+				FD4FBCAF215F5ADE0016ADA1 /* question.csv in Resources */,
 				FD050EB821501F92009194AA /* Assets.xcassets in Resources */,
-				FD2BEADB2158B0970000125B /* question.csv in Resources */,
 				FD050EB621501F90009194AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

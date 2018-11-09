@@ -8,7 +8,7 @@
 
 import UIKit
 import AudioToolbox
-//今度はquestionNo用
+//今度はquestionNo用のcounter
 var _counter = 1
 
 class QuestionViewController: UIViewController {
@@ -26,22 +26,19 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var correctImageView: UIImageView!       //正解時イメージビュー
     @IBOutlet weak var incorrectImageView: UIImageView!     //不正解時イメージビュー
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        QuestionDataManager.sharedInstance.loadQuestion()
         //初期データ設定処理, 前画面で設定済みのquestionDataから値を取り出す
-//        print("test")
-//        print(questionData.questionNo)
-//        nilが入ってる
-//        これを解決すればOK
+        //        print("test")
+        //        print(questionData.questionNo)
         questionNoLabel.text = "Q.\(String(_counter))"
         if _counter < 11 {
             _counter += 1
         }
         questionTextView.text = questionData.question
-//        print(questionTextView.text)
+        //        print(questionTextView.text)
         answer1Button.setTitle(questionData.answer1, for: UIControlState.normal)
         answer2Button.setTitle(questionData.answer2, for: UIControlState.normal)
         answer3Button.setTitle(questionData.answer3, for: UIControlState.normal)
@@ -115,6 +112,17 @@ class QuestionViewController: UIViewController {
         UIView.animate(withDuration: 1.0, animations: {
             //アルファ値を1.0に変化させる(初期値はStoryboardで0.0に設定済み)
             self.incorrectImageView.alpha = 1.0
+            //ここから正解の回答を表示するコード
+            //正解のボタンの色を変えるようにする
+            if(self.questionData.correctAnswerNumber == 1){
+                self.answer1Button.backgroundColor = UIColor.red
+            }else if(self.questionData.correctAnswerNumber == 2){
+                self.answer2Button.backgroundColor = UIColor.red
+            }else if(self.questionData.correctAnswerNumber == 3){
+                self.answer3Button.backgroundColor = UIColor.red
+            }else if(self.questionData.correctAnswerNumber == 4){
+                self.answer4Button.backgroundColor = UIColor.red
+            }
         }) { (Bool) in
             self.goNextQuestion()               //アニメーション完了後に次の問題に進む
         }
@@ -144,20 +152,3 @@ class QuestionViewController: UIViewController {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

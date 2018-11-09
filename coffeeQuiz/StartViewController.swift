@@ -20,7 +20,7 @@ class StartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     //次の画面に戦記する前に呼び出される準備処理
-    //多分ここが認識できてない←
+    
     override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
         
         //        問題文の読み込み
@@ -46,7 +46,7 @@ class StartViewController: UIViewController {
     //タイトルに戻ってくる時に呼び出される処理
     @IBAction func goToTitle(_ sender: UIStoryboardSegue) {
         print("GoTitle")
-       _counter = 1
+        _counter = 1
     }
     
     
